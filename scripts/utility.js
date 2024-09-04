@@ -1,28 +1,37 @@
-function removeClass(elementID) {
-    let element = document.getElementById(elementID);
-    element.classList.remove('hidden');
+function addClass(elementId) {
+    let element = document.getElementById(elementId);
+    element.classList.add('hidden')
 }
-function addClass(elementID) {
-    let element = document.getElementById(elementID);
-    element.classList.add('hidden');
+function removeClass(elementId) {
+    let element = document.getElementById(elementId);
+    element.classList.remove('hidden')
 }
-function setBaclgroundColor(elementID) {
-    let element = document.getElementById(elementID);
-    element.classList.add('bg-orange-400');
-}
-function removeBaclgroundColor(elementID) {
-    let element = document.getElementById(elementID);
-    element.classList.remove('bg-orange-400');
+function setBackgroundColor(elementId) {
+    let element = document.getElementById(elementId);
+    element.classList.add('bg-orange-400')
 }
 
-function randomAlphabets() {
-    let alphabetString = 'abcdefghijklmnopqrstuvwxyz';
-    let alphabets = alphabetString.split('');
-
-    let randomNumber = Math.random() * 25;
-    let alphabetIndex = Math.round(randomNumber)
+function handlekeypress(event) {
+    console.log(event.key);
     
-    let alphabet =  alphabets[alphabetIndex]
+}
+
+document.addEventListener('keyup', handlekeypress )
+
+
+function getRandomAlphabets() {
+    
+    let alphabets = "abcdefghijklmnopqrstuvwxyz";
+    let alphabetsArray = alphabets.split('');
+    console.log(alphabetsArray);
+
+    let randomNumbers = Math.random() * 26;
+    let index = Math.round(randomNumbers);
+    console.log(index);
+    
+    let alphabet = alphabetsArray[index];
+    console.log(alphabet);
     return alphabet;
     
+
 }
